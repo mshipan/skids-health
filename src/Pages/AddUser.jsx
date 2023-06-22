@@ -8,7 +8,7 @@ const AddUser = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/users", {
+    fetch("https://skids-health-server-sigma.vercel.app/users", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

@@ -11,7 +11,7 @@ const UpdateUser = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    fetch(`http://localhost:5000/users/${_id}`, {
+    fetch(`https://skids-health-server-sigma.vercel.app/users/${_id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

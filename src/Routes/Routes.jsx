@@ -13,7 +13,8 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/users"),
+        loader: () =>
+          fetch("https://skids-health-server-sigma.vercel.app/users"),
       },
       {
         path: "/add-user",
@@ -23,13 +24,17 @@ const router = createBrowserRouter([
         path: "/view-details/:id",
         element: <ViewDetails></ViewDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/users/${params.id}`),
+          fetch(
+            `https://skids-health-server-sigma.vercel.app/users/${params.id}`
+          ),
       },
       {
         path: "/update-user/:id",
         element: <UpdateUser></UpdateUser>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/users/${params.id}`),
+          fetch(
+            `https://skids-health-server-sigma.vercel.app/users/${params.id}`
+          ),
       },
     ],
   },
